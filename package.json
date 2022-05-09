@@ -4,11 +4,15 @@
   "description": "A relaxation website",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+
   },
   "author": "Mariam Adekola",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.7",
     "typescript": "^4.6.4"
-  }
+  },
+  "browserslist": "last 4 versions"
 }

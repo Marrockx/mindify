@@ -1,4 +1,4 @@
-import "./public/css/style.css"
+import "./public/css/prefixed/style.css"
 
 var checkbox = document.querySelector('input[name=mode]');
 checkbox.addEventListener('change', handleEvent);
