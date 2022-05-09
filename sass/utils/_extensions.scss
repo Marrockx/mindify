@@ -1,0 +1,50 @@
+%clear-spacing {
+    padding: 0;
+    margin: 0;
+}
+
+%remove-underline {
+    text-decoration: none;
+}
+
+%row {
+    flex-direction: row;
+}
+
+%column {
+    flex-direction: column;
+}
+
+%justify-center {
+    justify-content: center;
+}
+
+%space-between {
+    justify-content: space-between;
+}
+
+%align-start {
+    align-items: start;
+}
+
+%justify-self-center {
+    justify-self: center;
+}
+
+%align-self-center {
+    align-self: center;
+
+}
+
+%align-center {
+    align-items: center;
+}
+
+
+%stretch {
+    justify-content: stretch;
+}
+
+%space-evenly {
+    justify-content: space-evenly;
+}

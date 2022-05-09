@@ -1,0 +1,14 @@
+{
+  "name": "mindify",
+  "version": "1.0.0",
+  "description": "A relaxation website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+  },
+  "author": "Mariam Adekola",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.4"
+  }
+}

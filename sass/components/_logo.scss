@@ -1,0 +1,16 @@
+.logo--link {
+    color: $dark;
+    @extend %remove-underline;
+    cursor: pointer;
+    display: flex;
+    @extend %column;
+    @extend %align-center;
+}
+
+.logo--link .logo {
+    height: 8rem;
+    width: 200px;
+
+    display: block;
+
+}

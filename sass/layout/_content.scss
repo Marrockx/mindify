@@ -1,0 +1,79 @@
+.content {
+    height: map-get($width, full);
+    background-color: $medium;
+    width: 100%;
+    margin: auto;
+
+}
+
+.content .content__hero {
+    display: flex;
+    @extend %row;
+    @extend %justify-center;
+    padding: nth($gap, 3);
+
+
+    @include tablet {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &--left {
+        width: map-get($width, avg);
+        padding-left: nth($gap, 3);
+
+        display: inline-flex;
+        @extend %column;
+        @extend %align-self-center;
+
+        @include tablet {
+            width: 100%;
+            padding: 0;
+
+        }
+
+        &__text {
+            font-size: nth($size, 5);
+            font-weight: bold;
+            width: map-get($width, full);
+            letter-spacing: 2px;
+            line-height: 96px;
+            color: $dark;
+            padding: nth($gap, 3) 0;
+
+        }
+
+        &__sub-text {
+            font-size: nth($size, 3);
+            font-weight: 400;
+            color: $dark;
+            letter-spacing: 2px;
+            line-height: nth($size, 4);
+
+        }
+
+    }
+
+    &--right {
+        width: 50%;
+        text-align: center;
+        padding: nth($gap, 2);
+        display: inline-flex;
+        @extend %column;
+        @extend %align-self-center;
+        @extend %align-center;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &-img {
+            width: 100%;
+            display: inline-flex;
+            @extend %column;
+            @extend %align-self-center;
+            @extend %align-center;
+
+        }
+    }
+}

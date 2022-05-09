@@ -1,0 +1,56 @@
+.header .header__nav {
+    display: flex;
+    @extend %align-center;
+    @extend %row;
+    @extend %space-between;
+
+    background: $light;
+    height: 80px;
+    z-index: 100;
+    position: relative;
+    width: map-get($width, full);
+
+    &__list {
+        display: inline-flex;
+        @extend %row;
+        @extend %clear-spacing;
+        text-align: center;
+        margin-right: 24px;
+        list-style: none;
+
+        @include tablet {
+            display: none;
+        }
+
+        &__item {
+            padding-right: nth($gap, 1);
+        }
+
+        &__item--link {
+            padding: 0 nth($gap, 1);
+            color: $dark;
+            @extend %align-center;
+            @extend %justify-center;
+            @extend %remove-underline;
+
+            &:hover {
+                color: $medium;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+
+    &--bars {
+        opacity: 0;
+
+        @include tablet {
+            color: $dark;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+        }
+    }
+}

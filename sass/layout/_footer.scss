@@ -1,0 +1,138 @@
+.footer {
+    display: flex;
+    @extend %row;
+    @extend %space-between;
+    @extend %align-center;
+    padding: nth($gap, 2);
+    background-color: $light;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.footer .footer__about {
+    display: flex;
+    @extend %column;
+    @extend %align-start;
+
+    padding: 0 nth($gap, 2);
+
+
+    &--mindify-contact {
+        display: inline-flex;
+        @extend %column;
+        @extend %align-center;
+        font-size: nth($size, 1);
+        color: $secondary;
+        padding: nth($gap, 2);
+
+    }
+
+    &--mindify-address {
+        padding-bottom: nth($size, 2);
+    }
+}
+
+.footer .footer__nav {
+    display: flex;
+    @extend %column;
+    align-items: flex-end;
+    width: map-get($width, full);
+
+    @include tablet {
+        flex-direction: column;
+        padding-top: nth($gap, 2);
+        align-items: center;
+
+    }
+
+
+
+    &__links {
+        display: inline-flex;
+        @extend %row;
+        @extend %clear-spacing;
+
+        text-align: center;
+        margin-right: 24px;
+        list-style: none;
+
+
+        @include tablet {
+            flex-direction: column;
+
+        }
+
+
+        &--item {
+            list-style: none;
+            padding-right: nth($gap, 1);
+
+            @include tablet {
+                padding: 0;
+                padding-bottom: nth($gap, 2);
+            }
+        }
+
+
+        &__link {
+            padding: 0 nth($gap, 1);
+            color: $secondary;
+            @extend %align-center;
+            @extend %justify-center;
+            @extend %remove-underline;
+
+
+
+            &:hover {
+                color: lightness-shift($medium);
+                transition: all 0.3s ease;
+            }
+
+        }
+    }
+
+    &__social {
+        display: inline-flex;
+        @extend %column;
+        @extend %align-center;
+        padding-top: nth($gap, 2);
+
+        @include tablet {
+            align-self: center;
+        }
+
+
+        &--heading {
+            font-size: nth($size, 2);
+            padding-bottom: nth($gap, 2);
+            color: $dark;
+            text-align: center;
+
+        }
+
+        &__links {
+            display: inline-flex;
+            @extend %row;
+            @extend %clear-spacing;
+
+        }
+
+        &__links--item {
+            list-style: none;
+            padding-right: nth($gap, 2);
+        }
+
+        &__links--link {
+            @extend %remove-underline;
+            color: $medium;
+
+            &:hover {
+                color: lightness-shift();
+
+            }
+
+        }
+    }
+}

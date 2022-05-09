@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    @extend %row;
+    @extend %space-between;
+    @extend %align-center;
+    padding: 2rem calc((100vw - 1200px) / 2);
+    background: $light;
+
+
+}
